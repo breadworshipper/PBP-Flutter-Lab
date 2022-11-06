@@ -32,7 +32,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  var _genapganjil = 'Genap';
+  String _genapganjil = 'Genap';
 
   void _genapganjilset(){
     setState(() {
@@ -75,11 +75,16 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-
+            if (_genapganjil == 'Genap')
             Text(
               '$_genapganjil',
-
-            ),
+              style : TextStyle(color: Colors.red, fontSize: 40)
+            )
+            else
+              Text(
+                  '$_genapganjil',
+                  style : TextStyle(color: Colors.blue, fontSize: 40)
+              ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
@@ -91,13 +96,14 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: Stack(
         fit: StackFit.expand,
         children: [
+          if (_counter != 0)
           Positioned(
               left: 30,
               bottom: 20,
               child: FloatingActionButton(
                 onPressed: _decrementCounter,
                 tooltip: 'Decrement',
-                child: const Icon(Icons.minimize)
+                child: const Icon(Icons.remove)
               )
           ),
           Positioned(
@@ -111,11 +117,6 @@ class _MyHomePageState extends State<MyHomePage> {
           )
         ],
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: _incrementCounter,
-      //   tooltip: 'Increment',
-      //   child: const Icon(Icons.add),
-      // ),
     );
   }
 }
