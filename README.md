@@ -1,16 +1,8 @@
-# counter_7
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Stateless widget adalah widget yang tidak akan pernah berubah misalnya widget Icon, IconButton, Text.
+Sedangkan, stateful widget adalah widget yang dapat berubah saat user berinteraksi dengannya.
+2. Text : widget text yang berisi string, Stack : Container widget, Positioned : Widget yang mengontrol
+posisi anak dari Stack, TextStyle : Mengatur style dari widget Text
+3. Saat setState() dipanggil, fungsi akan memberi tahu framework bahwa state internal dari objek sudah berubah
+4. const digunakan jika nilai dari suatu variabel sudah diketahui sebelum di-compile, sedangkan final akan mengambil nilainya setelah 
+compile
+5. Pada tugas kali ini, saya hanya menggunakan const yang digunakan pada Icon
