@@ -11,6 +11,12 @@ TUGAS 8
 1. Navigator.Push akan menambahkan suatu route ke dalam suatu route stack yang diatur oleh Navigator dan untuk
 mendapatkan route yang sudah dimasukkan ke dalam stack tersebut dapat digunakan method pop(). Sedangkan, pushreplacement akan
 mem-push route dan me-replace route yang ada di paling atas stack.
-2. TextButton, Padding, Container, DropDownMenuItem, DropdownButtonFormField, TextFormField
-3. onPressed, onTap
-4. 
+2. 
+- TextButton : Button dengan text (dalam case tugas ini untuk submit form)
+- Padding : Untuk spacing 
+- Container : Container widget-widget
+- DropDownMenuItem : Item-item yang ada di dalam dropdown yang diambil dari list
+- DropdownButtonFormField : Input drop down
+- TextFormField : Input form text
+4. onPressed, onTap
+5. 
