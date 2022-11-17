@@ -18,5 +18,6 @@ mem-push route dan me-replace route yang ada di paling atas stack.
 - DropDownMenuItem : Item-item yang ada di dalam dropdown yang diambil dari list
 - DropdownButtonFormField : Input drop down
 - TextFormField : Input form text
+- Card : Container card untuk data
 3. onPressed, onTap
 
