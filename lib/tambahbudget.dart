@@ -4,7 +4,11 @@ import 'package:counter_7/databudget.dart';
 
 class Budget {
   String judulBudget;
+  int nominalBudget;
+  String jenisBudget;
+  static List<Budget> listBudget = [];
 
+  Budget(String this.judulBudget, int this.nominalBudget, String this.jenisBudget);
 }
 
 class TambahBudgetPage extends StatefulWidget {
@@ -159,7 +163,9 @@ class _TambahBudgetPageState extends State<TambahBudgetPage> {
                     "Simpan"),
                 onPressed: (){
                   if (_formKey.currentState!.validate()) {
-
+                    Budget newBudget = Budget(_judulBudget, _nominalBudget, _jenisBudget);
+                    Budget.listBudget.add(newBudget);
+                    _formKey.currentState?.reset();
                   }
                 },
                 )

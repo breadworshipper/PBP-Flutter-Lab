@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
 import 'package:counter_7/tambahbudget.dart';
 
+
 class DataBudgetPage extends StatefulWidget {
   const DataBudgetPage({super.key});
 
@@ -14,7 +15,7 @@ class _DataBudgetPageState extends State<DataBudgetPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Form'),
+        title: const Text('Data'),
       ),
       drawer: Drawer(
         child: Column(
@@ -54,13 +55,48 @@ class _DataBudgetPageState extends State<DataBudgetPage> {
         ),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text('Hello World!'),
-          ],
-        ),
+        child: ListView.builder(
+            itemCount: Budget.listBudget.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Card(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      child: Text(
+                        Budget.listBudget[index].judulBudget,
+                        style: const TextStyle(
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          child: Text(
+                            Budget.listBudget[index].nominalBudget.toString(),
+                            style: const TextStyle(
+                              fontSize: 18,
+                            ),
+                          ),
+                        ),
+                        const Flexible(fit: FlexFit.tight, child: SizedBox()), // Space
+                        Container(
+                          child: Text(
+                            Budget.listBudget[index].jenisBudget,
+                            style: const TextStyle(
+                              fontSize: 18,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              );
+            }),
       ),
     );
+
   }
 }
