@@ -6,3 +6,11 @@ posisi anak dari Stack, TextStyle : Mengatur style dari widget Text
 4. const digunakan jika nilai dari suatu variabel sudah diketahui sebelum di-compile, sedangkan final akan mengambil nilainya setelah 
 compile
 5. Pada tugas kali ini, saya hanya menggunakan const yang digunakan pada Icon
+
+TUGAS 8
+1. Navigator.Push akan menambahkan suatu route ke dalam suatu route stack yang diatur oleh Navigator dan untuk
+mendapatkan route yang sudah dimasukkan ke dalam stack tersebut dapat digunakan method pop(). Sedangkan, pushreplacement akan
+mem-push route dan me-replace route yang ada di paling atas stack.
+2. TextButton, Padding, Container, DropDownMenuItem, DropdownButtonFormField, TextFormField
+3. onPressed, onTap
+4. 
