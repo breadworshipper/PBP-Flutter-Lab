@@ -20,4 +20,4 @@ mem-push route dan me-replace route yang ada di paling atas stack.
 - TextFormField : Input form text
 - Card : Container card untuk data
 3. onPressed, onTap
-
+4. Navigator pada Flutter menggunakan stack dalam navigasi halaman yang kita tempuh. Bila kita ke page baru, Navigator akan mem-push page yang sebelumnya ke dalam stack dan jika kita ingin kembali ke dalam page tersebut Navigator akan melakukan operasi pop.
