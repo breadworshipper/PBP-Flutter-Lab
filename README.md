@@ -11,6 +11,14 @@ TUGAS 8
 1. Navigator.Push akan menambahkan suatu route ke dalam suatu route stack yang diatur oleh Navigator dan untuk
 mendapatkan route yang sudah dimasukkan ke dalam stack tersebut dapat digunakan method pop(). Sedangkan, pushreplacement akan
 mem-push route dan me-replace route yang ada di paling atas stack.
-2. TextButton, Padding, Container, DropDownMenuItem, DropdownButtonFormField, TextFormField
+2. 
+- TextButton : Button dengan text (dalam case tugas ini untuk submit form)
+- Padding : Untuk spacing 
+- Container : Container widget-widget
+- DropDownMenuItem : Item-item yang ada di dalam dropdown yang diambil dari list
+- DropdownButtonFormField : Input drop down
+- TextFormField : Input form text
+- Card : Container card untuk data
 3. onPressed, onTap
-4. 
+4. Navigator pada Flutter menggunakan stack dalam navigasi halaman yang kita tempuh. Bila kita ke page baru, Navigator akan mem-push page yang sebelumnya ke dalam stack dan jika kita ingin kembali ke dalam page tersebut Navigator akan melakukan operasi pop.
+5. Untuk implementasi checklist, form kurang lebih mengikuti lab kemarin namun tidak membuat pop up saat data berhasil di-submit. Lalu saya membuat class Budget untuk menyimpan data yang telah di-submit dan bisa diakses pada datapage. Pada datapage digunakan Listview.builder untuk membuat card data yang sudah di-submit sebelumnya
