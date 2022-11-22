@@ -5,6 +5,7 @@ import 'package:counter_7/page/databudget.dart';
 import 'package:flutter/material.dart';
 import 'package:counter_7/page/tambahbudget.dart';
 import 'package:counter_7/page/main.dart';
+import 'package:counter_7/page/watchlistdetail.dart';
 
 class MyWatchList extends StatefulWidget {
   const MyWatchList({Key? key}) : super(key: key);
@@ -14,29 +15,6 @@ class MyWatchList extends StatefulWidget {
 }
 
 class _MyWatchListState extends State<MyWatchList> {
-  Future<List<MyWatchListModel>> fetchWatchList() async {
-    var url = Uri.parse('https://djangoajrakatalog.herokuapp.com/mywatchlist/json/');
-    var response = await http.get(
-      url,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json",
-      },
-    );
-
-    // melakukan decode response menjadi bentuk json
-    var data = jsonDecode(utf8.decode(response.bodyBytes));
-
-    // melakukan konversi data json menjadi object ToDo
-    List<MyWatchListModel> listWatchList = [];
-    for (var d in data) {
-      if (d != null) {
-        listWatchList.add(MyWatchListModel.fromJson(d));
-      }
-    }
-
-    return listWatchList;
-  }
 
   @override
   Widget build(BuildContext context){
@@ -93,7 +71,7 @@ class _MyWatchListState extends State<MyWatchList> {
         ),
 
         body: FutureBuilder(
-                future: fetchWatchList(),
+                future: MyWatchListModel.fetchWatchList(),
                 builder: (context, AsyncSnapshot snapshot) {
                   if (snapshot.data == null) {
                     return const Center(child: CircularProgressIndicator());
@@ -113,7 +91,15 @@ class _MyWatchListState extends State<MyWatchList> {
                     } else {
                       return ListView.builder(
                           itemCount: snapshot.data!.length,
-                          itemBuilder: (_, index)=> Container(
+                          itemBuilder: (_, index)=> InkWell(
+                              onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => WatchListDetail(
+                                        modelWatchList: snapshot.data![index])),
+                              ),
+
+                            child: Container(
                             margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                             padding: const EdgeInsets.all(20.0),
                             decoration: BoxDecoration(
@@ -148,6 +134,7 @@ class _MyWatchListState extends State<MyWatchList> {
                               ],
                             )
                           )
+                      )
                       );
                     }
                   }
