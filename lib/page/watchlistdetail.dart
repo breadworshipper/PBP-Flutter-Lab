@@ -18,7 +18,6 @@ class _WatchListDetailState extends State<WatchListDetail> {
   _WatchListDetailState(this.model);
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Data Budget'),
@@ -73,7 +72,7 @@ class _WatchListDetailState extends State<WatchListDetail> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(16.0),
             child: Center(
               child: Text(
                 model.fields.title,
