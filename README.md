@@ -37,3 +37,7 @@ terlebih dahulu
 3. Pertama, di-fetch JSON terlebih dahulu dari Tugas 3. Kemudian, dengan MyWatchListModel.fromJson() 
 akan di-convert JSON ke dalam bentuk object MyWatchListModel. Object yang sudah di-convert tadi dapat 
 digunakan untuk membangun suatu list (dalam tugas ini watchlist).
+4. 
+- Menambahkan rute di drawer untuk page watchlist
+- Membuat model watchlist dengan quicktype
+- Membuat detail masing-masing watchlist dalam page baru
