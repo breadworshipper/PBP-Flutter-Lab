@@ -7,7 +7,7 @@ posisi anak dari Stack, TextStyle : Mengatur style dari widget Text
 compile
 5. Pada tugas kali ini, saya hanya menggunakan const yang digunakan pada Icon
 
-TUGAS 8
+## TUGAS 8
 1. Navigator.Push akan menambahkan suatu route ke dalam suatu route stack yang diatur oleh Navigator dan untuk
 mendapatkan route yang sudah dimasukkan ke dalam stack tersebut dapat digunakan method pop(). Sedangkan, pushreplacement akan
 mem-push route dan me-replace route yang ada di paling atas stack.
@@ -22,3 +22,18 @@ mem-push route dan me-replace route yang ada di paling atas stack.
 3. onPressed, onTap
 4. Navigator pada Flutter menggunakan stack dalam navigasi halaman yang kita tempuh. Bila kita ke page baru, Navigator akan mem-push page yang sebelumnya ke dalam stack dan jika kita ingin kembali ke dalam page tersebut Navigator akan melakukan operasi pop.
 5. Untuk implementasi checklist, form kurang lebih mengikuti lab kemarin namun tidak membuat pop up saat data berhasil di-submit. Lalu saya membuat class Budget untuk menyimpan data yang telah di-submit dan bisa diakses pada datapage. Pada datapage digunakan Listview.builder untuk membuat card data yang sudah di-submit sebelumnya
+
+## Tugas 9
+1. Pengambilan data JSON tanpa membuat model terlebih dahulu dapat dilakukan. Namun, pengambilan data 
+JSON tanpa membuat model tidak terlalu disarankan karena tidak lebih efektif dibandingkan membuat model 
+terlebih dahulu
+
+2. 
+- FutureBuilder : Widget yang membangun beberapa Future
+- Future : Hasil komputasi asynchronous (dalam tugas ini data JSON)
+- InkWell : Area yang merespon saat disentuh
+- ListTile (ketinggalan dari tugas 8) : Area yang bisa berisi text, icon, atau widget lain
+
+3. Pertama, di-fetch JSON terlebih dahulu dari Tugas 3. Kemudian, dengan MyWatchListModel.fromJson() 
+akan di-convert JSON ke dalam bentuk object MyWatchListModel. Object yang sudah di-convert tadi dapat 
+digunakan untuk membangun suatu list (dalam tugas ini watchlist).
